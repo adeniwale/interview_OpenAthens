@@ -13,12 +13,11 @@ public class DetailsPageObjects {
     }
 
     //Finding elements by xpath
-    public WebElement CheckAnotherVehicle() {
-        driver.findElement(By.xpath("//span[@class='jsx-1684733318 nav-toggle']")).click();
-        return driver.findElement(By.xpath("//a[@class='jsx-3809232611' and text()='Free Car Check']"));
+    public WebElement buttonCheckAnotherVehicle() {
+        return driver.findElement(By.xpath("//a[@class='jsx-503364468 ' and contains(text(), 'Check Another Vehicle')]"));
     }
 
-    public WebElement identityValue(String identity) {
+    public WebElement cellIdentityValue(String identity) {
         return driver.findElement(By.xpath("//dt[contains(text(),'" + identity + "')]/following-sibling::dd"));
     }
 }

@@ -34,7 +34,6 @@ public class DataHolder {
 
     public void addVehicleRegIdentities(String regNumber, List<String> identities) {
         this.vehicleRegIdentities.put(regNumber, identities);
-//        this.vehicleRegIdentities = vehicleRegIdentities;
     }
 
     public Map<String, List<String>> getVehicleRegIdentities() {
@@ -46,11 +45,11 @@ public class DataHolder {
         carInput = new String(encoded, StandardCharsets.US_ASCII);
     }
 
-    public void readCarOutput(String fileName) throws FileNotFoundException, Exception {
+    public void readCarOutput(String fileName) throws Exception {
         carOutput = Files.readAllLines(Paths.get(fileName));
     }
 
-    public void extractRegNumbers() throws Exception {
+    public void extractRegNumbers() {
         Matcher m = Pattern.compile("[A-Z]{2}\\d{2}\\s*[A-Z]{3}").matcher(carInput);
 
         while(m.find()) {

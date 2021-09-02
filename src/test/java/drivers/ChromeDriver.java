@@ -4,14 +4,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-//import io.cucumber.java.Scenario;
-
 public class ChromeDriver {
 
     private static WebDriver driver = null;
 
-    public void setup() {
-        ChromeOptions options = new ChromeOptions();
+    public void setup(ChromeOptions options) {
         options.setAcceptInsecureCerts(true);
 
         WebDriverManager.chromedriver().setup();
@@ -26,5 +23,4 @@ public class ChromeDriver {
     public static WebDriver getDriver() {
         return driver;
     }
-
 }

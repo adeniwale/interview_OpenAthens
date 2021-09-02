@@ -1,4 +1,4 @@
-Feature: Free Car Checks
+Feature: Free Car Check
 
   Background:
     Given I read input file "car_input.txt"

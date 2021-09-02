@@ -18,6 +18,7 @@ public class HomePageObjects {
     }
 
     public WebElement inputEnterRegistration() {
+        driver.findElement(By.xpath("//input[@placeholder='Enter Registration']")).clear();
         return driver.findElement(By.xpath("//input[@placeholder='Enter Registration']"));
     }
 
@@ -25,9 +26,9 @@ public class HomePageObjects {
         return driver.findElement(By.xpath("//button[text()='Free Car Check']"));
     }
 
-    public void EnsureFreeCarChecksPageIsOpened()
+    public void EnsureFreeCarCheckPageIsOpened()
     {
-        //Open the free car checks page in the browser if not opened yet
+        //Open the free car check page in the browser if not opened yet
         if (!driver.getCurrentUrl().equals(freeCarChecksURL)) {
             driver.navigate().to(freeCarChecksURL);
         }
