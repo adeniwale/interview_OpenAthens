@@ -12,7 +12,7 @@ public class HomePage {
 
     @Inject private ChromeBrowser chromebrowser;
 
-    private String oaOpenAthensURL;
+    private final String oaOpenAthensURL;
 
     public HomePage() {
         this.oaOpenAthensURL = "file:///" + Paths.get("registration-test/index.html").toAbsolutePath().toString().replaceAll("\\\\", "/");

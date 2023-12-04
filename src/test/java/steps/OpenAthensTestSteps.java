@@ -1,6 +1,5 @@
 package steps;
 
-import browsers.ChromeBrowser;
 import org.junit.Assert;
 import pageObjects.*;
 import io.cucumber.java.en.Given;
@@ -15,7 +14,6 @@ import static io.restassured.RestAssured.given;
 
 public class OpenAthensTestSteps {
 
-    @Inject private ChromeBrowser chromebrowser;
     @Inject private DashboardPage oaDashboardPageObj;
     @Inject private HomePage oaHomePageObj;
     @Inject private RegistrationPage oaRegistrationPageObj;
